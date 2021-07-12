@@ -1,4 +1,4 @@
-defmodule Concurrency.Supervisor do
+defmodule Concurrency.ChatSupervisor do
   use Supervisor
 
   alias Concurrency.Chat

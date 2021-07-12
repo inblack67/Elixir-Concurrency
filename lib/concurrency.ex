@@ -1,18 +1,9 @@
 defmodule Concurrency do
-  @moduledoc """
-  Documentation for `Concurrency`.
-  """
+  use Application
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Concurrency.hello()
-      :world
-
-  """
-  def hello do
-    :world
+  def start(_type, _args) do
+    Concurrency.GenCounterSupervisor.start_link()
   end
+
+  def hello, do: :world
 end
